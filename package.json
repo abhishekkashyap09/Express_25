@@ -1,0 +1,23 @@
+{
+  "name": "express_25",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/abhishekkashyap09/Express_25#readme",
+  "bugs": {
+    "url": "https://github.com/abhishekkashyap09/Express_25/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekkashyap09/Express_25.git"
+  },
+  "license": "ISC",
+  "author": "Abhishek",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
