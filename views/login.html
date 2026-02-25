@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Login Page</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(-45deg, #0f172a, #1e293b, #020617, #0f172a);
+        background-size: 400% 400%;
+        animation: bgAnimation 10s infinite ease-in-out;
+    }
+
+    @keyframes bgAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .container {
+        background: rgba(255, 255, 255, 0.05);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        padding: 40px;
+        border-radius: 15px;
+        width: 320px;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+        animation: float 3s infinite ease-in-out;
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        color: #38bdf8;
+    }
+
+    .input-box {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .input-box input {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+    }
+
+    .input-box input::placeholder {
+        color: #cbd5e1;
+    }
+
+    .login-btn {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        background: linear-gradient(45deg, #38bdf8, #0ea5e9);
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .login-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px #38bdf8;
+    }
+
+    .signup-text {
+        margin-top: 15px;
+        color: #cbd5e1;
+    }
+
+    .signup-btn {
+        margin-top: 10px;
+        display: inline-block;
+        padding: 8px 15px;
+        border-radius: 20px;
+        background: transparent;
+        border: 1px solid #38bdf8;
+        color: #38bdf8;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .signup-btn:hover {
+        background: #38bdf8;
+        color: black;
+        box-shadow: 0 0 10px #38bdf8;
+    }
+</style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Login</h2>
+
+        <form action="/login" method="POST">
+
+            <div class="input-box">
+                <input type="email" name="email" placeholder="Enter Email" required>
+            </div>
+
+            <div class="input-box">
+                <input type="password" name="password" placeholder="Enter Password" required>
+            </div>
+
+            <button class="login-btn">Login</button>
+
+        </form>
+
+        <div class="signup-text">
+            Don't have an account?
+        </div>
+
+        <!-- Signup button -->
+        <a href="/signup" class="signup-btn">Signup</a>
+
+    </div>
+
+</body>
+
+</html>
